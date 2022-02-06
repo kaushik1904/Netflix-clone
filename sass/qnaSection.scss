@@ -1,0 +1,71 @@
+.qna {
+  padding-bottom: 20rem;
+  text-align: center;
+  &_heading {
+    font-size: 3rem;
+
+    @include respond(midPhone) {
+      font-size: 2rem;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+    margin: 2rem auto;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+
+  &_con {
+    width: 100%;
+  }
+
+  &_q {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+    text-align: left;
+
+    @include respond(midPhone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &_a {
+    display: inline-block;
+    padding: 1.2em;
+  }
+
+  &_visiable {
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    font-size: 1.5rem;
+    text-align: left;
+    @include respond(midPhone) {
+      font-size: 1.2rem;
+    }
+  }
+}
